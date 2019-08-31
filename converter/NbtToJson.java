@@ -64,7 +64,7 @@ public final class NbtToJson {
 		// Lists
 		} else if (nbtElement instanceof NBTList) {
 			NBTList nbtList = (NBTList) nbtElement;
-			JsonArray jsonArray = new JsonArray(nbtList.size());
+			JsonArray jsonArray = new JsonArray();
 			
 			for (NBTBase nbtBase : (List<NBTBase>) nbtList) {
 				jsonArray.add(toJson(nbtBase, mode));
