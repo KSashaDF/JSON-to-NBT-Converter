@@ -13,3 +13,5 @@ I was unable to find a JSON to NBT converter, so I made my own. Feel free to use
    - _(NBT)_ Type specific lists
 
 3. This converter uses NMS code, and so may experience minor breakages between Minecraft versions.
+
+4. This converter was made for a server running paper, small changes may have to be made for compatability with an unmodified spigot server.
