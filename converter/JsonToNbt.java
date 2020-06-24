@@ -1,7 +1,7 @@
 package converter;
 
 import com.google.gson.*;
-import net.minecraft.server.v1_13_R2.*;
+import net.minecraft.server.v1_15_R1.*;
 
 import java.util.Map;
 
@@ -28,30 +28,30 @@ public final class JsonToNbt {
 				boolean value = jsonPrimitive.getAsBoolean();
 				
 				if (value) {
-					return new NBTTagByte((byte) 1);
+					return NBTTagByte.a(true);
 				} else {
-					return new NBTTagByte((byte) 0);
+					return NBTTagByte.a(false);
 				}
 				
 			} else if (jsonPrimitive.isNumber()) {
 				Number number = jsonPrimitive.getAsNumber();
 				
 				if (number instanceof Byte) {
-					return new NBTTagByte(number.byteValue());
+					return NBTTagByte.a(number.byteValue());
 				} else if (number instanceof Short) {
-					return new NBTTagShort(number.shortValue());
+					return NBTTagShort.a(number.shortValue());
 				} else if (number instanceof Integer) {
-					return new NBTTagInt(number.intValue());
+					return NBTTagInt.a(number.intValue());
 				} else if (number instanceof Long) {
-					return new NBTTagLong(number.longValue());
+					return NBTTagLong.a(number.longValue());
 				} else if (number instanceof Float) {
-					return new NBTTagFloat(number.floatValue());
+					return NBTTagFloat.a(number.floatValue());
 				} else if (number instanceof Double) {
-					return new NBTTagDouble(number.doubleValue());
+					return NBTTagDouble.a(number.doubleValue());
 				}
 				
 			} else if (jsonPrimitive.isString()) {
-				return new NBTTagString(jsonPrimitive.getAsString());
+				return NBTTagString.a(jsonPrimitive.getAsString());
 			}
 			
 		// JSON Array

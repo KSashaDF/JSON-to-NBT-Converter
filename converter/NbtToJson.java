@@ -4,7 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import net.minecraft.server.v1_13_R2.*;
+import net.minecraft.server.v1_15_R1.*;
 
 import java.util.List;
 import java.util.Map;
@@ -52,7 +52,7 @@ public final class NbtToJson {
 				}
 				
 				case RAW: {
-					return new JsonPrimitive(nbtNumber.j());
+					return new JsonPrimitive(nbtNumber.k());
 				}
 			}
 			
